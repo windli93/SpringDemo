@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="cn.com.github.salarMapper">
+    
+     <resultMap type="cn.com.github.entity.Salaries" id="SalresultMap">
+      <id column="emp_no" property="emp_no" jdbcType="DOUBLE"/> 
+      <id column="from_date" property="from_date" jdbcType="VARCHAR"/>
+      <result column="salary" property="salary" jdbcType="DOUBLE"/>    
+      <result column="to_date" property="to_date" jdbcType="VARCHAR"/> 
+     </resultMap>
+     
+    <!-- 查询所有员工分工资 -->
+    <select id="findSalById" resultType="cn.com.github.entity.Salaries" parameterType="cn.com.github.entity.Salaries">
+      select emp_no,salary,from_date,to_date from salaries where emp_no = #{emp_no} and from_date = #{from_date}
+    </select>
+    
+    <select id="findAllSal" resultType="cn.com.github.entity.Salaries">
+      select emp_no,salary,from_date,to_date from salaries
+    </select>
+    
+    <insert id="insrtSalById" parameterType="cn.com.github.entity.Salaries">
+      insert into salaries(emp_no,salary,from_date,to_date) values(#{emp_no,jdbcType=DOUBLE},#{salary,jdbcType=DOUBLE},#{from_date,jdbcType=VARCHAR},#{to_date,jdbcType=VARCHAR})
+    </insert>
+    
+</mapper>
