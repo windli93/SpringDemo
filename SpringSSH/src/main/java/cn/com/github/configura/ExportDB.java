@@ -9,6 +9,8 @@ import org.hibernate.service.ServiceRegistry;
 import org.hibernate.tool.hbm2ddl.SchemaExport;
 import org.hibernate.tool.schema.TargetType;
 
+
+
 public class ExportDB {
        
 	public static void main(String[] args) {
