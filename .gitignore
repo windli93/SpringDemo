@@ -2,3 +2,7 @@
 
 /SpringSSM/target
 /SpringService/target
+/SpringBatch/target
+*.settings
+*.classpath
+*.project
