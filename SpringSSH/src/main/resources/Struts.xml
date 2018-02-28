@@ -5,7 +5,7 @@
 <struts>  
 <constant name="struts.i18n.encoding" value="utf-8" />  
     <package name="struts2" extends="struts-default">  
-        <action name="LoginAction" class="cn.com.github.controller.LoginAction">  
+        <action name="LoginAction" class="cn.com.github.controller.LoginAction"> 
             <result name="success">success.jsp</result>  
             <result name="fail">fail.jsp</result>  
         </action>  

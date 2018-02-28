@@ -4,6 +4,7 @@ import java.util.List;
 
 public class Employees {
 
+	private Dept_Emp dept_Emp; 
 	private int emp_no;
 	private String birth_date;
 	private String first_name;
@@ -83,6 +84,14 @@ public class Employees {
 		this.last_name = last_name;
 		this.gender = gender;
 		this.hire_date = hire_date;
+	}
+
+	public Dept_Emp getDept_Emp() {
+		return dept_Emp;
+	}
+
+	public void setDept_Emp(Dept_Emp dept_Emp) {
+		this.dept_Emp = dept_Emp;
 	}
 	
 }

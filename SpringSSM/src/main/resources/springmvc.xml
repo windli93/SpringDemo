@@ -25,6 +25,20 @@
      <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver" />
      <bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter" />  -->
      
+     <!-- <bean id="djDept" class="cn.com.github.entity.Dept_Emp" />
+     
+     <bean id="dkEmployees" class="cn.com.github.entity.Employees">
+        <property name="Dept_Emp" ref="djDept"/>
+     </bean>
+     
+     <bean id="dkEM" class="cn.com.github.entity.Employees">
+         <constructor-arg ref="djDept"/>
+         <constructor-arg type="String" value="张老三"/>
+         <constructor-arg value="张老四"/>
+     </bean> -->
+     
+     
+     
      <mvc:annotation-driven></mvc:annotation-driven>
-     <context:component-scan base-package="cn.com.github.controller"></context:component-scan>
+     <context:component-scan base-package="cn.com.github" />
 </beans>
