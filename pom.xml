@@ -15,17 +15,20 @@
 		<module>SpringSSM</module>
 		<module>SpringSSH</module>
         <module>SpringBatch</module>
-  </modules>
+		<module>java-demo</module>
+	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<cxf.version>2.2.7</cxf.version>
 		<project.junit.version>3.8.1</project.junit.version>
-		<slf4j.version>1.7.2</slf4j.version>
-		<log4j.version>1.2.17</log4j.version>
 		<spring.version>4.3.7.RELEASE</spring.version>
 		<spring-batch.version>4.0.0.RELEASE</spring-batch.version>
 		<struts.version>2.3.14</struts.version>
+		<slf4j.version>1.7.12</slf4j.version>
+		<log4j.version>1.2.17</log4j.version>
+		<fastjson.version>1.2.47</fastjson.version>
+		<lombok.version>1.16.12</lombok.version>
 	</properties>
 
 	<dependencyManagement>
@@ -197,36 +200,20 @@
 				<artifactId>druid</artifactId>
 				<version>1.0.23</version>
 			</dependency>
-			<!-- 添加日志相关jar包 -->
 			<dependency>
 				<groupId>org.slf4j</groupId>
 				<artifactId>slf4j-api</artifactId>
 				<version>${slf4j.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>slf4j-log4j12</artifactId>
-				<version>${slf4j.version}</version>
-				<scope>runtime</scope>
-			</dependency>
-			<!-- common-logging 实际调用slf4j -->
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>jcl-over-slf4j</artifactId>
-				<version>${slf4j.version}</version>
-				<scope>runtime</scope>
-			</dependency>
-			<!-- java.util.logging 实际调用slf4j -->
-			<dependency>
-				<groupId>org.slf4j</groupId>
-				<artifactId>jul-to-slf4j</artifactId>
-				<version>${slf4j.version}</version>
-				<scope>runtime</scope>
-			</dependency>
-			<dependency>
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
 				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
 			</dependency>
 			<!-- Spring batch -->
 			<dependency>  
