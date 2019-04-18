@@ -11,6 +11,7 @@
 
     <modules>
         <module>SpringDemo1</module>
+        <module>SpringDao</module>
     </modules>
 
     <parent>

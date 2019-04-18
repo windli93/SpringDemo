@@ -3,4 +3,5 @@
 /.project
 /.idea
 /SpringDemo1/target
+/SpringDao/target
 *.iml

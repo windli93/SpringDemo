@@ -13,7 +13,8 @@ import org.springframework.context.annotation.PropertySources;
 @PropertySources({
         @PropertySource("classpath:log4j.properties"),
         @PropertySource("classpath:application.properties"),
-        @PropertySource("classpath:user.properties")})
+        @PropertySource("classpath:user.properties"),
+        @PropertySource("classpath:mysql.properties")})
 @ComponentScan(basePackages = "cn.com.github")
 @Configuration
 public class AppConfig {
