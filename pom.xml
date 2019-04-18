@@ -7,11 +7,15 @@
     <artifactId>SpringDemo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+
     <name>SpringMaven</name>
+    <description>Spring boot 多模块搭建</description>
 
     <modules>
-        <module>SpringDemo1</module>
-        <module>SpringDao</module>
+        <module>Spring-web</module>
+        <module>Spring-service</module>
+        <module>Spring-domain</module>
+        <module>Spring-repository</module>
     </modules>
 
     <parent>
@@ -21,33 +25,27 @@
         <relativePath/>
     </parent>
 
-    <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.junit.version>3.8.1</project.junit.version>
-    </properties>
-
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>commons-httpclient</groupId>
-                <artifactId>commons-httpclient</artifactId>
-                <version>3.0</version>
+                <groupId>cn.com.github.SpringDemo</groupId>
+                <artifactId>Spring-domain</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>commons-io</groupId>
-                <artifactId>commons-io</artifactId>
-                <version>2.3</version>
+                <groupId>cn.com.github.SpringDemo</groupId>
+                <artifactId>Spring-web</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
             <dependency>
-                <groupId>redis.clients</groupId>
-                <artifactId>jedis</artifactId>
-                <version>2.5.0</version>
+                <groupId>cn.com.github.SpringDemo</groupId>
+                <artifactId>Spring-repository</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
-            <!--druid数据池 -->
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid</artifactId>
-                <version>1.0.23</version>
+                <groupId>cn.com.github.SpringDemo</groupId>
+                <artifactId>Spring-service</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
