@@ -1,5 +1,6 @@
 package cn.com.github.demo1.config;
 
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.PropertySource;
  * @DATE 2019/4/18 10:46
  **/
 @PropertySource(value = {"classpath:log4j.properties", "classpath:application.properties"})
+@ComponentScan(basePackages = "cn.com.github")
 @Configuration
 public class AppConfig {
 
