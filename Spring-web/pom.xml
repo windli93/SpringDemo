@@ -69,7 +69,6 @@
 
     <build>
         <plugins>
-            <!--自动部署-->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>

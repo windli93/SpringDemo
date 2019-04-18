@@ -10,6 +10,7 @@ import org.springframework.context.annotation.PropertySources;
  * @AUTHOR ragrokli
  * @DATE 2019/4/18 10:46
  **/
+@ComponentScan(basePackages = {"cn.com.github"})
 @PropertySources({
         @PropertySource("classpath:log4j.properties"),
         @PropertySource("classpath:application.properties"),

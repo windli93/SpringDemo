@@ -19,13 +19,13 @@ public class UserController {
     @RequestMapping("findAll")
     public String info() {
         log.info("用户总数是{}", userService.list());
-        return "Hello Spring111 Boot, user list is " + userService.list();
+        return "Hello Spring111 Boot, user list is " + userService.list() + "大小事" + userService.list().size();
     }
 
     @RequestMapping("findByName")
     public String name() {
         User user = userService.findByName("bb2");
         log.info("用户详细数据是：{}", JSONObject.toJSONString(user));
-        return "Hello Spring111 Boot, user list is " + JSONObject.toJSONString(user);
+        return "Hello Spring111 Boot, user list is ragrok is man " + JSONObject.toJSONString(user);
     }
 }
