@@ -29,6 +29,6 @@ public class Test1 {
     public void test2() {
         AppInfo info = new AppInfo();
         log.info("info value1{}", info.getName());
-        log.info("info value2{}", info.getWant());
+        log.info("info value2{}", info.getAge());
     }
 }
