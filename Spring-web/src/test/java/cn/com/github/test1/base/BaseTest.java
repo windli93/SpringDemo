@@ -1,4 +1,4 @@
-package cn.com.github.test1;
+package cn.com.github.test1.base;
 
 import cn.com.github.Main;
 import lombok.extern.slf4j.Slf4j;

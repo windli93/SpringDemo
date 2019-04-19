@@ -1,7 +1,8 @@
-package cn.com.github.test1;
+package cn.com.github.test1.test1;
 
 import cn.com.github.domain.entity.User;
 import cn.com.github.service.inter.UserService;
+import cn.com.github.test1.base.BaseTest;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;

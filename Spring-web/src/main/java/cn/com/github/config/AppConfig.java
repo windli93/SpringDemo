@@ -14,6 +14,7 @@ import org.springframework.context.annotation.PropertySources;
 @PropertySources({
         @PropertySource("classpath:log4j.properties"),
         @PropertySource("classpath:application.properties"),
+        @PropertySource("classpath:redis.properties"),
         @PropertySource("classpath:mysql.properties")})
 @Configuration
 public class AppConfig {
