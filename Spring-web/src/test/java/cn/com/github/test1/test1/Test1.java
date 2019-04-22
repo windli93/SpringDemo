@@ -23,9 +23,9 @@ public class Test1 extends BaseTest {
         DateFormat dateFormat = DateFormat.getDateTimeInstance();
         String formattedDate = dateFormat.format(date);
 
-        userService.save(new User("aa1", "aa@126.com", "aa", "aa123456", formattedDate));
-        userService.save(new User("bb2", "bb@126.com", "bb", "bb123456", formattedDate));
-        userService.save(new User("cc3", "cc@126.com", "cc", "cc123456", formattedDate));
+//        userService.save(new User("aa1", "aa@126.com", "aa", "aa123456", formattedDate));
+//        userService.save(new User("bb2", "bb@126.com", "bb", "bb123456", formattedDate));
+//        userService.save(new User("cc3", "cc@126.com", "cc", "cc123456", formattedDate));
 
         //Assert.assertEquals(9, userRepository.findAll().size());
         //Assert.assertEquals("bb", userRepository.findByUserNameOrEmail("bb", "cc@126.com").getNickName());
