@@ -16,6 +16,7 @@
         <module>Spring-service</module>
         <module>Spring-domain</module>
         <module>Spring-repository</module>
+        <module>Spring-api</module>
     </modules>
 
     <parent>
