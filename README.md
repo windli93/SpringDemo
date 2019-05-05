@@ -23,7 +23,7 @@ neety:
 
 # 自己机器：
 root 1234   vhr
-# 公司机器：
+# 公司机器： 
 root root 数据库 test
 
 
