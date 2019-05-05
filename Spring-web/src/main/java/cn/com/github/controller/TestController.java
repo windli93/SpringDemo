@@ -94,9 +94,12 @@ public class TestController {
     }
 
     //清空所有key
-    @RequestMapping(value = "/empty", method = RequestMethod.GET)
+    @RequestMapping(value = "/value", method = RequestMethod.GET)
     @ResponseBody
     public void empty() {
         service.empty();
+    }
+
+    public void redis1(){
     }
 }

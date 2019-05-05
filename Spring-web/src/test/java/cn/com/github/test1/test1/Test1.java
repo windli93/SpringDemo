@@ -5,6 +5,7 @@ import cn.com.github.service.config.JedisConfig;
 import cn.com.github.service.inter.UserService;
 import cn.com.github.service.util.FruitInfoUtil;
 import cn.com.github.test1.base.BaseTest;
+import cn.com.github.test1.manager.channel.ChannelTest1;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,9 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicLong;
 
 @Slf4j
 public class Test1 extends BaseTest {
@@ -68,6 +72,31 @@ public class Test1 extends BaseTest {
             jedis.zadd("scoreboard", scoreboard);
         }
 
+    }
+
+    @Test
+    public void test3() {
+        log.info("【START】{}", System.currentTimeMillis());
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        log.info("【START】{}", System.currentTimeMillis());
+    }
+
+    @Test
+    public void test4() {
+        AtomicLong num = new AtomicLong(100);
+        log.info("新增数据{}", num.addAndGet(100));
+        log.info("新增数据{}", num.addAndGet(-10));
+    }
+
+
+    @Test
+    public void test5() throws Exception {
+        ChannelTest1 test1 = new ChannelTest1();
+        test1.getChannel();
     }
 
 }
