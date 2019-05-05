@@ -19,6 +19,7 @@ Nio:
 neety:
 1. netty源码学习： https://blog.csdn.net/zxhoo/article/category/1800249
 2. 理解netty： https://blog.csdn.net/suifeng3051/article/category/2161821
+3. netty官方文档：https://waylau.gitbooks.io/netty-4-user-guide/content/
 
 
 # 自己机器：

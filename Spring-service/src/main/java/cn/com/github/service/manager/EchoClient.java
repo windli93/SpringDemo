@@ -1,4 +1,4 @@
-package cn.com.github.test1.manager.channel;
+package cn.com.github.service.manager;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;

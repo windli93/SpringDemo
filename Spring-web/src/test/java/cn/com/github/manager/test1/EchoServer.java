@@ -1,4 +1,4 @@
-package cn.com.github.test1.test1;
+package cn.com.github.manager.test1;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.buffer.ByteBuf;

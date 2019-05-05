@@ -1,4 +1,4 @@
-package cn.com.github.test1.manager.channel;
+package cn.com.github.service.manager;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.ByteBufUtil;

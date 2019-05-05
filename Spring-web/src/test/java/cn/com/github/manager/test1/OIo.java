@@ -1,4 +1,4 @@
-package cn.com.github.test1.test1;
+package cn.com.github.manager.test1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
