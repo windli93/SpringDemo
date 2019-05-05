@@ -1,11 +1,9 @@
-package cn.com.github.test1.test1;
+package cn.com.github.manager.test1;
 
-import cn.com.github.domain.entity.User;
-import cn.com.github.service.config.JedisConfig;
+import cn.com.github.manager.manager.channel.ChannelTest1;
 import cn.com.github.service.inter.UserService;
 import cn.com.github.service.util.FruitInfoUtil;
-import cn.com.github.test1.base.BaseTest;
-import cn.com.github.test1.manager.channel.ChannelTest1;
+import cn.com.github.manager.base.BaseTest;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +15,6 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.ThreadFactory;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
