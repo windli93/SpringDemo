@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: cn.com.github.test1.BaseTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.662 s <<< FAILURE! - in cn.com.github.test1.BaseTest
+initializationError(cn.com.github.test1.BaseTest)  Time elapsed: 0.006 s  <<< ERROR!
+java.lang.Exception: No runnable methods
+
