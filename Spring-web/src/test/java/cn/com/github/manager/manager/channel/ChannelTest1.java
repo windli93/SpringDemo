@@ -1,4 +1,4 @@
-package cn.com.github.test1.manager.channel;
+package cn.com.github.manager.manager.channel;
 
 
 import java.io.File;

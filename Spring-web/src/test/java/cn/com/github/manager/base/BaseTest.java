@@ -1,6 +1,5 @@
-package cn.com.github.test1.base;
+package cn.com.github.manager.base;
 
-import cn.com.github.Main;
 import cn.com.github.config.AppConfig;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.runner.RunWith;
