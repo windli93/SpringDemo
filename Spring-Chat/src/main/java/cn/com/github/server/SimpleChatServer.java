@@ -22,27 +22,31 @@ public class SimpleChatServer {
         this.port = port;
     }
 
-    public void run() throws Exception{
-        EventLoopGroup boosGroup = new NioEventLoopGroup();
+    public void run() throws Exception {
+
+        EventLoopGroup bossGroup = new NioEventLoopGroup(); // (1)
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-
         try {
-            ServerBootstrap bootstrap = new ServerBootstrap();
-            bootstrap.group(boosGroup,workerGroup);
-            bootstrap.channel(NioServerSocketChannel.class);
-            bootstrap.option(ChannelOption.SO_BACKLOG,128);
-            bootstrap.childOption(ChannelOption.SO_KEEPALIVE,true);
-            bootstrap.handler(new SimpleChatServerInitializer());
-            log.info("服务器启动了。。。。。。。。。。。。。");
-            //监听端口,获取接收到的连接
-            ChannelFuture future = bootstrap.bind(port).sync();
-            future.channel().closeFuture().sync();
-        }catch (Exception e){
+            ServerBootstrap b = new ServerBootstrap(); // (2)
+            b.group(bossGroup, workerGroup)
+                    .channel(NioServerSocketChannel.class) // (3)
+                    .childHandler(new SimpleChatServerInitializer())  //(4)
+                    .option(ChannelOption.SO_BACKLOG, 128)          // (5)
+                    .childOption(ChannelOption.SO_KEEPALIVE, true); // (6)
 
-        }finally {
-            boosGroup.shutdownGracefully();
+            System.out.println("SimpleChatServer 启动了");
+
+            // 绑定端口，开始接收进来的连接
+            ChannelFuture f = b.bind(port).sync(); // (7)
+
+            // 等待服务器  socket 关闭 。
+            // 在这个例子中，这不会发生，但你可以优雅地关闭你的服务器。
+            f.channel().closeFuture().sync();
+
+        } finally {
             workerGroup.shutdownGracefully();
-            log.info("服务器关闭了。。。。。");
+            bossGroup.shutdownGracefully();
+            System.out.println("SimpleChatServer 关闭了");
         }
     }
 }

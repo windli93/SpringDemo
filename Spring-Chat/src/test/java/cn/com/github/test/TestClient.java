@@ -11,8 +11,8 @@ import org.junit.Test;
 public class TestClient {
 
     @Test
-    public void test1(){
-        SimpleChatClient chatClient = new SimpleChatClient("127.0.0.1",8080);
+    public void test1() throws Exception {
+        SimpleChatClient chatClient = new SimpleChatClient("127.0.0.1", 8080);
         chatClient.run();
     }
 }

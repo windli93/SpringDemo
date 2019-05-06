@@ -22,17 +22,18 @@ public class SimpleChatServerHandler extends SimpleChannelInboundHandler<String>
     //获取数据
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, String s) throws Exception {
-        log.info("SimpleChatServerHandler 读取到的数据：{}", s);
+        System.out.println("SimpleChatServerHandler 读取到的数据：{}" + s);
         Channel inComing = channelHandlerContext.channel();
         for (Channel channel : channels) {
             if (channel != inComing) {
-                log.info("新增channel：{}", channel.remoteAddress().toString());
+                System.out.println("新增channel ：{}" + channel.remoteAddress().toString());
                 channel.writeAndFlush("[" + inComing.remoteAddress() + "]" + s + "\n");
             } else {
                 channel.writeAndFlush("[you: ]" + s + "\n");
             }
         }
     }
+
     //新增
     @Override
     public void handlerAdded(ChannelHandlerContext ctx) throws Exception {

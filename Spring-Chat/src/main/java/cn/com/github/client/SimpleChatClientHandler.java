@@ -21,16 +21,7 @@ public class SimpleChatClientHandler extends SimpleChannelInboundHandler<String>
     //获取数据
     @Override
     protected void channelRead0(ChannelHandlerContext channelHandlerContext, String s) throws Exception {
-        log.info("SimpleChatServerHandler 读取到的数据：{}", s);
+        System.out.println(s);
     }
 
-    @Override
-    public void channelActive(ChannelHandlerContext ctx) throws Exception {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        while (true){
-            Channel channel = ctx.channel();
-            log.info("输入数据:{}",reader.readLine());
-            channel.writeAndFlush(reader.readLine());
-        }
-    }
 }
