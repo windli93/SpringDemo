@@ -17,6 +17,7 @@
         <module>Spring-domain</module>
         <module>Spring-repository</module>
         <module>Spring-api</module>
+        <module>Spring-Chat</module>
     </modules>
 
     <parent>
