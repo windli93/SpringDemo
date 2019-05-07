@@ -20,6 +20,7 @@ redis 常见面试题：https://www.cnblogs.com/jasontec/p/9699242.html
 1. netty源码学习： https://blog.csdn.net/zxhoo/article/category/1800249
 2. 理解netty： https://blog.csdn.net/suifeng3051/article/category/2161821
 3. netty官方文档：https://waylau.gitbooks.io/netty-4-user-guide/content/
+4. https://blog.csdn.net/chaoyuehu/article/month/2018/03
 
 #### Spring-Chat netty实现的聊天室
 # 自己机器：

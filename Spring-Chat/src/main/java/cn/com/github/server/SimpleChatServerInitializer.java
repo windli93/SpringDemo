@@ -18,9 +18,10 @@ public class SimpleChatServerInitializer extends ChannelInitializer<SocketChanne
     @Override
     protected void initChannel(SocketChannel socketChannel) throws Exception {
         ChannelPipeline pipeline = socketChannel.pipeline();
-        pipeline.addLast("framer",new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
-        pipeline.addLast("decoder",new StringDecoder());
-        pipeline.addLast("encoder",new StringEncoder());
-        pipeline.addLast("handler",new SimpleChatServerHandler());
+        pipeline.addLast("framer", new DelimiterBasedFrameDecoder(8192, Delimiters.lineDelimiter()));
+        pipeline.addLast("decoder", new StringDecoder());
+        pipeline.addLast("encoder", new StringEncoder());
+        pipeline.addLast("handler", new SimpleChatServerHandler());
+        System.out.println("SimpleChatClient:"+socketChannel.remoteAddress() +"连接上");
     }
 }
