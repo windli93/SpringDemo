@@ -31,4 +31,9 @@ public class NioTest1 {
             buffer.clear();
         }
     }
+
+    @Test
+    public void testBuffTest2(){
+
+    }
 }
