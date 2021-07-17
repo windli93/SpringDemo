@@ -8,11 +8,12 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 @Slf4j
-public class NioTest1 {
+public class ByteBufferSimple {
 
     @Test
     public void byteBuffTest1() throws Exception {
-        FileChannel channel = new FileInputStream(this.getClass().getClassLoader().getResource("data.txt").getPath()).getChannel();
+        String path = this.getClass().getClassLoader().getResource("data.txt").getPath();
+        FileChannel channel = new FileInputStream(path).getChannel();
         //准备缓冲区
         ByteBuffer buffer = ByteBuffer.allocate(10);
         while (true) {
@@ -30,10 +31,5 @@ public class NioTest1 {
             //切换读模式
             buffer.clear();
         }
-    }
-
-    @Test
-    public void testBuffTest2(){
-
     }
 }
