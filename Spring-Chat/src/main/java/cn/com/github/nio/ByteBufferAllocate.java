@@ -16,8 +16,8 @@ public class ByteBufferAllocate {
         //直接内存分配方式
         Class buffer1 = ByteBuffer.allocateDirect(10).getClass();
 
-        log.info("Class path:{}",buffer.getName());
-        log.info("Class1 path:{}",buffer1.getName());
+        log.info("Class path:{}",buffer.getName());//java堆内存，读写效率低，受到java Gc的影响
+        log.info("Class1 path:{}",buffer1.getName());//直接内存，读写效率高（少一次拷贝），不受JavaGc的影响，分配效率低
     }
 
 }
