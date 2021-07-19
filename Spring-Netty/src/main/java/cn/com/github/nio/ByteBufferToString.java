@@ -1,6 +1,5 @@
 package cn.com.github.nio;
 
-import cn.hutool.json.JSONUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 
@@ -14,8 +13,8 @@ public class ByteBufferToString {
     public void test1() {
         ByteBuffer buffer = ByteBuffer.allocate(16);
         buffer.put("hello".getBytes());
-
-        log.info("Value:{}", JSONUtil.toJsonStr(buffer));
+        buffer.flip();
+        log.info("Value:{}", buffer.array());
     }
 
 }
