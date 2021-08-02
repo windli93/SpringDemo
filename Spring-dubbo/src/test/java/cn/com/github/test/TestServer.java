@@ -11,7 +11,7 @@ public class TestServer {
 
     @Test
     public void test1() throws Exception {
-        SimpleChatServer simpleChatServer = new SimpleChatServer(8080);
-        simpleChatServer.run();
+//        SimpleChatServer simpleChatServer = new SimpleChatServer(8080);
+//        simpleChatServer.run();
     }
 }
