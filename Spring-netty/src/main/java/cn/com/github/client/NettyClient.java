@@ -11,6 +11,8 @@ import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 import io.netty.util.CharsetUtil;
 
+import java.util.HashMap;
+
 /**
  * @AUTHOR windli
  * @DATE 2021/7/23 16:37
@@ -40,5 +42,6 @@ public class NettyClient {
                  group.shutdownGracefully();
              }
         }
+        HashMap
     }
 }
