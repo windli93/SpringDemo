@@ -11,8 +11,6 @@ import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 import io.netty.util.CharsetUtil;
 
-import java.util.HashMap;
-
 /**
  * @AUTHOR windli
  * @DATE 2021/7/23 16:37
@@ -20,7 +18,7 @@ import java.util.HashMap;
  **/
 
 public class NettyClient {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         NioEventLoopGroup group = new NioEventLoopGroup();
         try {
             Bootstrap bootstrap = new Bootstrap();
@@ -35,13 +33,12 @@ public class NettyClient {
                             pipeline.addLast(new DemoServerClientHandler());
                         }
                     });
-            ChannelFuture future = bootstrap.connect("localhost",9000).sync();
+            ChannelFuture future = bootstrap.connect("localhost", 9000).sync();
             future.channel().closeFuture().sync();
-        }finally {
-             if (group != null){
-                 group.shutdownGracefully();
-             }
+        } finally {
+            if (group != null) {
+                group.shutdownGracefully();
+            }
         }
-        HashMap
     }
 }
